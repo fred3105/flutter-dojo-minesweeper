@@ -14,6 +14,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(
+            fontSize: 32,
+          ),
+        ),
       ),
       home: const MyHomePage(),
     );
@@ -25,23 +30,19 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.white,
-        body: SafeArea(
-          child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 9,
-              crossAxisSpacing: 8,
-              mainAxisSpacing: 8,
+    return const Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: ColoredBox(
+          color: Colors.red,
+          child: Center(
+            child: Text(
+              "Bonjour le dojo",
+              textAlign: TextAlign.center,
             ),
-            padding: const EdgeInsets.all(10),
-            itemCount: 9 * 9,
-            itemBuilder: (BuildContext context, int index) {
-              return const ColoredBox(
-                color: Colors.grey,
-              );
-            },
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
