@@ -34,11 +34,11 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: ColoredBox(
-          color: Colors.red,
+          color: Colors.blue,
           child: Center(
             child: Text(
-              "Bonjour le dojo",
-              textAlign: TextAlign.center,
+              "Le dojo commence maintenant!",
+              textAlign: TextAlign.left,
             ),
           ),
         ),
